@@ -84,12 +84,12 @@ class homeListSreenViewController: UIViewController, UISearchBarDelegate, UITabl
         tableView.reloadData()
     }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-        GlobalVariable.videos.removeAll()
-        GlobalVariable.videos = createArray()
-        tableView.reloadData()
-    }
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        searchBar.text = ""
+////        GlobalVariable.videos.removeAll()
+////        GlobalVariable.videos = createArray()
+//        tableView.reloadData()
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         GlobalVariable.myIndex=indexPath.row

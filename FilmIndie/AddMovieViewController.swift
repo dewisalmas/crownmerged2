@@ -148,13 +148,14 @@ class AddMovieViewController: UIViewController,UIPickerViewDelegate,UIPickerView
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if
             let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            myImageView.image = image
+            if picker==imagePicker{
+                    myImageView.image = image
+            }
+            if picker==imageScenePicker{
+                sceneImageView.image = image
+            }
         }
-        if
-            let sceneImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            
-            sceneImageView.image = sceneImage
-        }
+        
         
         dismiss(animated: true, completion: nil)
     }

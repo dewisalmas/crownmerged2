@@ -44,7 +44,7 @@ class votedListScreenViewController: UIViewController {
     func filterVote() -> [Video]{
         var totvidvote:Int=GlobalVariable.allVideo.count
         GlobalVariable.tempVote.removeAll()
-        for i in 0..<totvidvote-1{
+        for i in 0..<totvidvote{
             if GlobalVariable.allVideo[i].vote==true{
             GlobalVariable.tempVote.append(GlobalVariable.allVideo[i])
             }

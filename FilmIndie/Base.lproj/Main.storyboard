@@ -43,8 +43,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to BLABLABLA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8z-os-sQ3">
-                                <rect key="frame" x="84" y="451" width="247" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to INDIEMAND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8z-os-sQ3">
+                                <rect key="frame" x="84" y="451" width="245" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -1837,7 +1837,7 @@
                                 </state>
                                 <connections>
                                     <action selector="editButtonPress:" destination="a8N-1q-xc0" eventType="touchUpInside" id="o3H-DQ-7Es"/>
-                                    <segue destination="eUt-Ww-lGC" kind="show" id="vii-0t-iLL"/>
+                                    <segue destination="MXJ-KF-FEo" kind="show" id="BfL-SG-rSJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2186,6 +2186,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="neC-Ip-OpX">
+                                <rect key="frame" x="166" y="604" width="212" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eGZ-mc-cCl">
                                 <rect key="frame" x="169" y="425" width="209" height="143"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -2194,14 +2201,6 @@
                                     <!--2019-03-28 10:30:01 +0000-->
                                 </date>
                             </datePicker>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TxJ-Qg-kaE">
-                                <rect key="frame" x="167" y="278" width="212" height="153"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SmZ-Y2-dEe">
-                                <rect key="frame" x="157" y="565" width="212" height="108"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Producer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eho-Fb-SpB">
                                 <rect key="frame" x="29" y="221" width="120" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2237,6 +2236,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f44-6T-R4K">
+                                <rect key="frame" x="167" y="340" width="212" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VKv-Op-jjV"/>
@@ -2244,8 +2250,11 @@
                     <navigationItem key="navigationItem" title="Edit Movie" id="pIc-ms-tbE"/>
                     <connections>
                         <outlet property="SynopsisField" destination="x9Q-5J-Iro" id="877-qr-cBZ"/>
+                        <outlet property="genreLabel" destination="s07-SP-Nkf" id="h8c-eO-LTI"/>
+                        <outlet property="locField" destination="neC-Ip-OpX" id="iba-1y-696"/>
                         <outlet property="producerField" destination="yIG-nV-jOc" id="KVf-KM-v1M"/>
                         <outlet property="titleField" destination="xuy-6F-ag9" id="yzV-oW-uaY"/>
+                        <outlet property="yearField" destination="f44-6T-R4K" id="RH9-Ch-x1e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEJ-6U-Zbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2402,8 +2411,9 @@
         <image name="voted_bit" width="36" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="BfL-SG-rSJ"/>
         <segue reference="a2E-fs-Ji6"/>
-        <segue reference="Eph-Bj-Zio"/>
+        <segue reference="Cvd-g2-KsG"/>
         <segue reference="AS6-t0-s4V"/>
         <segue reference="E5A-2a-RSO"/>
     </inferredMetricsTieBreakers>
