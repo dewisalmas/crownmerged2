@@ -103,8 +103,8 @@ class homeListSreenViewController: UIViewController, UISearchBarDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        GlobalVariable.videos=searchVid()
-        print(GlobalVariable.videos.count)
-        print(indexPath.count)
+//        print(GlobalVariable.videos.count)
+//        print(indexPath.count)
         let cell = tableView.dequeueReusableCell(withIdentifier:"VideoCell") as! videoCellTableViewCell
         if filteredData.count == 6{
             cell.setVideo(video: GlobalVariable.videos[indexPath.row])
@@ -114,6 +114,7 @@ class homeListSreenViewController: UIViewController, UISearchBarDelegate, UITabl
                     if j ==  GlobalVariable.videos[i].title{
                         if filteredData.count == 1{
                             cell.setVideo(video: GlobalVariable.videos[i])
+                            print(indexPath.row)
                         }else{
                             cell.setVideo(video: GlobalVariable.videos[indexPath.row])
                             
